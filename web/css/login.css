@@ -1,0 +1,240 @@
+/* *,
+* *,
+* * *,
+* * * *,
+* * * * *,
+* * * * * *,
+* * * * * * *,
+* * * * * * * * {
+  background-color: rgba(255, 252, 87, 0.795);
+} */
+@import './reset.css' all;
+html,
+body {
+  background: #fff;
+}
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 100vh;
+}
+.left-img {
+  width: 50%;
+  height: 100vh;
+  /* flex-grow: 0;
+  flex-shrink: 2;
+  flex-basis: 50%; */
+}
+.left-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.form-ctn {
+  width: 50%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* flex-grow: 2;
+  flex-shrink: 0;
+  flex-basis: 50%; 
+  justify-self: center;
+  align-items: center;*/
+  background-color: var(--snake-tail);
+}
+.login-title-block {
+  max-width: 75%;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.login-title-block .login-title {
+  color: #fff;
+  position: relative;
+  margin-bottom: 0;
+}
+.login-title-block .login-title::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 80%;
+  position: absolute;
+  left: -23px;
+  top: 0;
+  background-color: var(--blue);
+  border-radius: 2px;
+}
+.login-title-block .login-slogan {
+  color: #aaafb3;
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.form-ctn form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 75%;
+  padding: 0 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+label span img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+label.checked span,
+label.wrong span {
+  position: absolute;
+  right: -35px;
+  top: calc(50% + 10px);
+  width: 20px;
+  height: 20px;
+}
+input {
+  border: 2px solid #aaafb3;
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: 0.5s, ease all;
+  outline: 0;
+  width: 300px;
+  height: 60px;
+  font-size: 20px;
+  padding: 0 10px;
+  margin: 15px 0 0 0;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: Gilroy, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 25px;
+  position: relative;
+  color: #fff;
+}
+
+input:focus,
+input:active {
+  border: 2px solid #6039f5;
+}
+
+.checkbox-custom {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  margin: 20px auto;
+}
+.checkbox-custom input {
+  position: absolute;
+}
+.checkbox-custom p {
+  padding-left: 40px;
+  margin: 0;
+  color: #fff;
+}
+.checkbox-custom label {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 0;
+  background: #fcfff4;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5); */
+}
+.checkbox-custom label:after {
+  content: "";
+  width: 13px;
+  height: 8px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border: 3px solid #6bd9c8;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.checkbox-custom label:hover::after {
+  opacity: 0.5;
+}
+.checkbox-custom input[type="checkbox"] {
+  visibility: hidden;
+}
+.checkbox-custom input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+button.sign {
+  width: 180px;
+  height: 60px;
+  background: var(--blue);
+  box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  font-family: Gilroy, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+
+  color: #ffffff;
+  transition: ease 0.5s all;
+}
+button.sign:hover {
+  background-color: #fff;
+  color: var(--blue);
+}
+@media screen and (max-width: 1450px) {
+  .form-ctn form {
+    max-width: 90%;
+  }
+  input {
+    width: 255px;
+  }
+  label {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 928px) {
+  .left-img {
+    width: 100%;
+    height: 20vh;
+  }
+
+  .form-ctn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .form-ctn form {
+    justify-content: center;
+  }
+}

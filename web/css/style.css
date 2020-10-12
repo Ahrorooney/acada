@@ -1,0 +1,324 @@
+@import './reset.css' all;
+/* 
+┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓
+┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛
+
+      NAVIGATION STYLES
+
+┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓
+┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛
+**/
+
+.nav-wrapper {
+  height: 120px;
+  width: 100%;
+  background-color: var(--violet);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 5;
+}
+
+.nav-wrapper .nav-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 0 1 50%;
+}
+.nav-wrapper .nav-search #hideable-bar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 0 1 66%;
+  transition: linear 0.5s all;
+}
+
+#logo {
+  width: 169px;
+  height: 52px;
+  flex: 0 1 169px;
+}
+
+.button.btn-courses {
+  background-color: var(--dark-blue);
+  flex: 0 1 auto;
+  color: #fff;
+  height: 52px;
+  font-weight: bold;
+}
+
+.nav-wrapper .nav-search .search-bar {
+  /* width: 100%; */
+  position: relative;
+  display: flex;
+  flex: 0 1 33%;
+}
+
+.nav-wrapper .nav-search .search-bar .search-field {
+  transition: linear 0.5s all;
+  transform: scaleX(0);
+  width: 0;
+  padding: 0.7rem 1.3rem;
+  border-radius: 12px 0 0 12px;
+  font-size: 1.5rem;
+  background-color: #fff;
+  color: var(--violet);
+}
+
+.search-field:focus {
+  color: var(--blue);
+}
+
+.search-button {
+  background: var(--dark-blue);
+  padding: 0.7rem 1.3rem;
+  color: #fff;
+  border-radius: 0 12px 12px 0;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.nav-main {
+  flex: 0 1 50%;
+}
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-list-item {
+  height: 70px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+}
+.nav-list-item .nav-link {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.2rem;
+}
+/* 
+┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓
+                          .hidden
+┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛ 
+**/
+.nav-wrapper .nav-search.hidden .search-bar .search-field {
+  transform-origin: right;
+  transform: scaleX(1);
+  width: 350px;
+}
+.nav-wrapper .nav-search.hidden .search-bar {
+  flex: 0 1 100%;
+}
+.nav-wrapper .nav-search.hidden #hideable-bar #logo {
+  flex: 0 1 0%;
+  width: 0%;
+}
+.nav-wrapper .nav-search.hidden #hideable-bar {
+  width: 0%;
+  transform: scale(0);
+}
+/* 
+┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓
+┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛
+                      MAIN HEADER CONTENT
+┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓
+┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛
+**/
+.header-ad {
+  height: calc(100vh - 120px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.magic-bg {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2rem;
+  background-color: var(--black);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+h1.ad-title {
+  /* font-family: Gilroy; */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 6rem;
+  line-height: 121px;
+  color: #ffffff;
+
+  margin: 3rem 0;
+}
+p.ad-description {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  max-width: 600px;
+  color: #dadada;
+}
+
+.button.button-login {
+  background-color: var(--blue);
+  padding: 1.2rem 4rem;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 36px;
+  color: #ffffff;
+  margin: 1.5rem 2rem 0 0;
+}
+
+.button.button-watch {
+  background-color: var(--gray);
+  padding: 1.2rem 4rem;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 36px;
+  color: #ffffff;
+  margin: 1.5rem 0 0 2rem;
+}
+
+.snake {
+  width: 5px;
+  height: 5px;
+  background: var(--blue);
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  left: 15px;
+  animation: walking 5s linear infinite;
+  box-shadow: 0px 0px 134px 59px var(--blue);
+}
+
+@keyframes walking {
+  0% {
+    left: 10%;
+    top: 5%;
+  }
+  25% {
+    left: 90%;
+    top: 5%;
+  }
+  50% {
+    top: 90%;
+    left: 90%;
+  }
+  75% {
+    left: 10%;
+    top: 90%;
+  }
+  100% {
+    top: 5%;
+    left: 10%;
+  }
+}
+
+/* 
+┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓
+┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛
+                      TOP COURSES
+┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓
+┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛
+**/
+.title {
+  font-family: Gilroy, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 72px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.title.big {
+  font-weight: bold;
+  font-size: 5rem;
+  line-height: 121px;
+}
+section, .top-courses {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0 3rem;
+  overflow-x: hidden;
+}
+.horizontal-scroll.top-courses-content {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  white-space: nowrap;
+  display: flex;
+  cursor: grabbing;
+}
+
+/* width */
+.horizontal-scroll.top-courses-content::-webkit-scrollbar {
+  height: 0px;
+}
+
+/* Track */
+.horizontal-scroll.top-courses-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.horizontal-scroll.top-courses-content::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.horizontal-scroll.top-courses-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.course {
+  min-width: 360px;
+  height: 240px;
+  margin: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #6039F5;
+  border-radius: 33px;
+}
+.course .course-name {
+  font-family: Gilroy, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  user-select: none;
+}
+
+
+/* 
+┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓
+┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛
+                      Hundred courses
+┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓
+┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛
+**/
+.desc-block {
+  flex: 3 0 33%;
+}
+.img-container {
+  flex: 0 3 66%;
+}

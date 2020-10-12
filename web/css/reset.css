@@ -1,0 +1,98 @@
+:root {
+    font-size: 16px;
+  
+    --blue: #6039f5;
+    --gray: #2b2e42;
+    --blue-green: #6bd9c8;
+    --dark-blue: #482fae;
+    --violet: #221c38;
+    --black: #15161b;
+    --snake-tail: #2c215e;
+  }
+  
+  /* 
+      
+  ┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓
+  ┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛
+  
+                      🇷​​​​​🇪​​​​​🇧​​​​​🇴​​​​​🇴​​​​​🇹​​​​​ 🇨​​​​​🇺​​​​​🇸​​​​​🇹​​​​​🇴​​​​​🇲​​​​​ 🇨​​​​​🇸​​​​​🇸​​​​​ 🇸​​​​​🇹​​​​​🇾​​​​​🇱​​​​​🇪​​​​​🇸​​​​​
+  
+  ┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓
+  ┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛
+  **/
+  * {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--black);
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  button {
+    border: 0;
+    outline: 0;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  input,
+  input:active,
+  input:focus {
+    border: 0;
+    outline: 0;
+  }
+  
+  /* img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  } */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .button {
+    padding: 0.7rem 1.3rem;
+    border-radius: 12px;
+    font-size: 1.75rem;
+  }
+  p {
+    color: inherit;
+  }
+  h1, h2, h3, h4, h5 {
+    color: inherit;
+  }
+  
+
+
+  /* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-blue);
+}

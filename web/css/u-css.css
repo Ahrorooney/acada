@@ -1,0 +1,27 @@
+.df {
+    display: flex;
+}
+.df-center{
+    justify-content: center;
+    align-items: center;
+}
+.df-row{
+    flex-direction: row;
+}
+.df-column{
+    flex-direction: column;
+}
+.df-between {
+    justify-content: space-between;
+}
+.df-evenly {
+    justify-content: space-evenly;
+}
+
+.white {
+    color: #ffffff;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
